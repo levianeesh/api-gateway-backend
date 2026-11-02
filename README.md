@@ -36,40 +36,46 @@ Node.js (v18+)
 MongoDB Atlas account (or local MongoDB server)
 
 Installation
-Clone the repository
+1.Clone the repository
 
-Bash
+```bash
 git clone https://github.com/yourusername/api-gateway-backend.git
 cd api-gateway-backend
-Install Backend Dependencies
+```
+2.Install Backend Dependencies
 
-Bash
+```bash
 npm install
-Install Frontend Dependencies
+```
+3.Install Frontend Dependencies
 
-Bash
+```bash
 cd frontend
 npm install
 cd ..
-Environment Configuration
+```
+4.Environment Configuration
 Create a .env file in the root directory and add the following variables:
 
-Code snippet
+```Code snippet
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/gateway_db?retryWrites=true&w=majority
 JWT_SECRET=your_super_secret_cryptographic_string
-Start the Development Servers
+```
+5.Start the Development Servers
 Open two terminal windows.
 
 Terminal 1 (Backend):
 
-Bash
+```Bash
 npm run dev
+```
 Terminal 2 (Frontend):
 
-Bash
+```Bash
 cd frontend
 npm run dev
+```
 API Reference
 Internal Dashboard APIs (Requires JWT Bearer Token)
 POST /auth/register - Register a new developer account
