@@ -77,6 +77,7 @@ cd frontend
 npm run dev
 ```
 API Reference
+
 Internal Dashboard APIs (Requires JWT Bearer Token)
 POST /auth/register - Register a new developer account
 
@@ -96,6 +97,7 @@ External Gateway APIs (Requires x-api-key Header)
 POST /v1/process-payment - Mock transaction route that triggers background webhooks
 
 Security Implementation Notes
+
 Zero-Knowledge API Keys: Raw API keys are never stored in the database. If a key is lost, the developer must roll their key via the dashboard.
 
 Webhook Signature Verification: External developers can verify incoming webhooks by hashing the raw request body with their dashboard-provided whsec_ secret and comparing it to the x-webhook-signature header.
